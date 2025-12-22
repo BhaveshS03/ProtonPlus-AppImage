@@ -12,9 +12,16 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/com.vysp3r.ProtonPlus.png
 export DESKTOP=/usr/share/applications/com.vysp3r.ProtonPlus.desktop
 export STARTUPWMCLASS=com.vysp3r.ProtonPlus
 export GTK_CLASS_FIX=1
+export DEPLOY_P11KIT=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/protonplus
+quick-sharun \
+	/usr/bin/protonplus                       \
+	/usr/share/vala                           \
+	/usr/lib/gio/modules/libgiognomeproxy.so  \
+	/usr/lib/gio/modules/libgiognutls.so      \
+	/usr/lib/gio/modules/libgiolibproxy.so
+
 
 # Additional changes can be done in between here
 
